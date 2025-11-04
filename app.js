@@ -437,13 +437,6 @@ function addCardMouseEffect() {
  * Muestra un mensaje de error
  */
 function showError(message) {
-    elements.loadingSpinner.style.display = show ? 'block' : 'none';
-}
-
-/**
- * Muestra un mensaje de error
- */
-function showError(message) {
     elements.pokemonList.innerHTML = `
         <div class="error-message">
             <h3>⚠️ Error</h3>
