@@ -1,0 +1,28 @@
+{
+  "name": "pokedex-tec",
+  "version": "1.0.0",
+  "description": "Pokédex interactiva de la región Kanto usando PokéAPI",
+  "main": "app.js",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "lint": "eslint *.js --fix",
+    "format": "prettier --write \"**/*.{js,html,css,md}\"",
+    "test": "echo \"No tests configured yet\" && exit 0"
+  },
+  "keywords": [
+    "pokemon",
+    "pokedex",
+    "pokeapi",
+    "javascript",
+    "educational"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
