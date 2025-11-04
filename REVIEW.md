@@ -284,6 +284,6 @@ Este es un **proyecto sólido y bien ejecutado** que demuestra competencia en de
 
 ---
 
-**Revisado el:** 4 de Noviembre, 2025
+**Revisado el:** 4 de Noviembre, 2024
 **Revisor:** GitHub Copilot Analysis
 **Versión:** 1.0
