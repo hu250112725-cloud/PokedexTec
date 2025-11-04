@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokédex interactiva de Kanto con búsqueda, paginación y vista detallada usando PokéAPI.">
+    <meta name="color-scheme" content="light dark">
+    <title>Pokédex Kanto · Interactiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="pokedex-header">
+            <div class="header-content">
+                <div class="rotom-eye"></div>
+                <h1>⚡ Rotom Pokédex</h1>
+                <p class="subtitle">Base de Datos Pokémon Completa • Generaciones 1-9</p>
+            </div>
+        </header>
+
+        <!-- Barra de búsqueda y filtros -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar Pokémon por nombre o número..."
+                    class="search-input"
+                >
+                <select id="genFilter" class="gen-filter">
+                    <option value="all">🌍 Todas las Regiones</option>
+                    <option value="gen1">🔴 Kanto (Gen 1)</option>
+                    <option value="gen2">🔵 Johto (Gen 2)</option>
+                    <option value="gen3">🟢 Hoenn (Gen 3)</option>
+                    <option value="gen4">🟡 Sinnoh (Gen 4)</option>
+                    <option value="gen5">⚫ Unova (Gen 5)</option>
+                    <option value="gen6">⚪ Kalos (Gen 6)</option>
+                    <option value="gen7">🟠 Alola (Gen 7)</option>
+                    <option value="gen8">🔵 Galar (Gen 8)</option>
+                    <option value="gen9">🔴 Paldea (Gen 9)</option>
+                </select>
+                <button id="searchBtn" class="search-btn">🔍 Buscar</button>
+                <button id="clearBtn" class="clear-btn">✖ Limpiar</button>
+            </div>
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="main-content">
+            <!-- Lista de Pokémon -->
+            <div class="pokemon-list-section">
+                <div class="section-header">
+                    <h2>Lista de Pokémon</h2>
+                    <div class="pagination-info">
+                        <span id="paginationInfo">Cargando...</span>
+                    </div>
+                </div>
+                
+                <div id="pokemonList" class="pokemon-grid"></div>
+                
+                <!-- Paginación -->
+                <div class="pagination">
+                    <button id="prevBtn" class="pagination-btn" disabled>◀ Anterior</button>
+                    <span id="pageInfo" class="page-info">Página 1</span>
+                    <button id="nextBtn" class="pagination-btn">Siguiente ▶</button>
+                </div>
+            </div>
+
+            <!-- Vista de detalle -->
+            <div id="pokemonDetail" class="pokemon-detail-section hidden">
+                <div class="detail-header">
+                    <button id="closeDetailBtn" class="close-btn">✖ Cerrar</button>
+                    <h2>Detalles del Pokémon</h2>
+                </div>
+                
+                <div id="detailContent" class="detail-content">
+                    <!-- El contenido se cargará dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
